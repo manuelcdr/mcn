@@ -120,3 +120,13 @@ gulp.task('dev', ['css', 'js', 'browserSync'], function() {
   gulp.watch('./js/*.js', ['js']);
   gulp.watch('./*.html', browserSync.reload);
 });
+
+gulp.task('serve', function () {
+  browserSync.init({
+      server: {
+          baseDir: "./"
+      }
+  });
+
+  gulp.watch("*.html").on("change", reload);
+});
