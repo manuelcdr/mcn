@@ -53,20 +53,20 @@ p.lead {
 .social-icons {
   a {
     display: inline-block;
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 2rem;
+    width: 2rem;
     background-color: $gray-700;
     color: $white !important;
     border-radius: 100%;
     text-align: center;
-    font-size: 1.5rem;
-    line-height: 3.5rem;
+    font-size: 1rem;
+    line-height: 2rem;
     margin-right: 1rem;
     &:last-child {
       margin-right: 0;
     }
     &:hover {
-      background-color: $primary;
+      background-color: $info;
     }
   }
 }
