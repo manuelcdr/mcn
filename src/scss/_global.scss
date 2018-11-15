@@ -4,7 +4,7 @@ body {
   @include body-font;
   padding-top: 54px;
   color: $gray-800;
-  background-color: $gray-300
+  background-color: $light;
 }
 @media (min-width: 992px) {
   body {
@@ -55,8 +55,8 @@ p.lead {
     display: inline-block;
     height: 2rem;
     width: 2rem;
-    background-color: $gray-700;
-    color: $white !important;
+    background-color: $secondary;
+    color: $white;
     border-radius: 100%;
     text-align: center;
     font-size: 1rem;
@@ -66,7 +66,8 @@ p.lead {
       margin-right: 0;
     }
     &:hover {
-      background-color: $info;
+      background-color: $light;
+      color: $secondary;
     }
   }
 }
@@ -75,7 +76,7 @@ p.lead {
   font-size: 3rem;
   .list-inline-item i {
     &:hover {
-      color: $primary;
+      color: $light;
     }
   }
 }

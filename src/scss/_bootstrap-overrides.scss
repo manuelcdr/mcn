@@ -6,6 +6,18 @@
   color: $primary !important;
 }
 
+.text-secondary {
+  color: $secondary !important;
+}
+
+.text-green {
+  color: $green;
+}
+
+.text-blue {
+  color: $blue;
+}
+
 a {
   color: $primary;
   &:hover,

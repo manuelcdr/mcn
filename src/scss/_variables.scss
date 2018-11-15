@@ -16,6 +16,11 @@ $black:    #000 !default;
 
 $blue-900: #212555 !default;
 
+$sky :       #CAEBF2 !default;
+$carbon:     #A9A9A9 !default;
+$watermelon: #FF3B3F !default;
+$neutral:    #EFEFEF !default;
+
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
@@ -27,13 +32,13 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
-$primary:       $blue-900 !default;
-$secondary:     $gray-600 !default;
+$primary:       $sky !default;
+$secondary:     $watermelon !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+$light:         $gray-200 !default;
 $dark:          $gray-800 !default;
 
 // Page Variables

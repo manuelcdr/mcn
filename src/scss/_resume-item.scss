@@ -3,12 +3,17 @@ section.resume-section {
   padding-bottom: 5rem !important;
   max-width: 75rem;
   .resume-item {
-    .resume-content {}
     .resume-date {
       min-width: none;
     }
   }
 }
+
+.section-title {
+  text-align: center;
+  color: $secondary;
+}
+
 @media (min-width: 768px) {
   section.resume-section {
     min-height: 100vh;
