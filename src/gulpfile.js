@@ -100,7 +100,7 @@ gulp.task('js:minify', function() {
 });
 
 gulp.task('html', function() {
-  return gulp.src(['./*.html'])
+  return gulp.src(['./*.html', './*.ico'])
     .pipe(gulp.dest('./app/'))
     .pipe(browserSync.stream());
 });
