@@ -80,7 +80,7 @@ gulp.task('css:minify', ['css:compile'], function() {
 });
 
 // CSS
-gulp.task('css', ['css:compile', 'css:minify']);
+gulp.task('css', ['css:minify']);
 
 // Minify JavaScript
 gulp.task('js:minify', function() {
@@ -129,7 +129,8 @@ gulp.task('browserSync', function() {
 gulp.task('dev', ['default', 'browserSync'], function() {
   gulp.watch('./scss/*.scss', ['css']);
   gulp.watch('./js/*.js', ['js']);
-  gulp.watch('./*.html', browserSync.reload);
+  gulp.watch('./*.html', ['html']);
+  // browserSync.reload();
 });
 
 gulp.task('serve', function () {
