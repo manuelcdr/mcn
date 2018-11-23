@@ -80,3 +80,16 @@ p.lead {
     }
   }
 }
+
+ul {
+  &.dashed {
+  list-style-type: none;
+    &.dashed > li {
+      text-indent: -0.7rem;
+      &:before {
+        content: "- ";
+        text-indent: -0.7rem;
+      }
+    }
+  } 
+}
