@@ -84,7 +84,7 @@ p.lead {
 ul {
   &.dashed {
   list-style-type: none;
-    &.dashed > li {
+    & > li {
       text-indent: -0.7rem;
       &:before {
         content: "- ";
