@@ -2,13 +2,15 @@ var TxtType = function (el) {
     var toRotate = el.getAttribute('data-type');
     var period = el.getAttribute('data-period');
     var delay = el.getAttribute('data-delay');
+    var speed = el.getAttribute('data-speed');
 
     this.toRotate = JSON.parse(toRotate);
     this.el = el;
     this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
+    this.period = parseInt(period, 10) || 0;
     this.txt = 'a';
     this.delay = parseInt(delay, 10) || 2000;
+    this.speed = parseInt(speed, 10) || 130;
     var that = this;
 
     setTimeout(function() {that.tick()}, this.delay);
@@ -21,9 +23,11 @@ TxtType.prototype.tick = function () {
     var fullTxt = this.toRotate[i];
 
     if (this.isDeleting) {
-        // var child = $(this.el).children('.wrap');
-        // this.el.removeChild(child[0]);
-        return;
+        if (this.period > 0){
+            this.txt = fullTxt.substring(0, this.txt.length - 1);    
+        } else {
+            return;
+        }
     } else {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
@@ -31,7 +35,7 @@ TxtType.prototype.tick = function () {
     this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
     var that = this;
-    var delta = 130 - Math.random() * 100;
+    var delta = this.speed - Math.random() * 100;
 
     if (this.isDeleting) { delta /= 2; }
 

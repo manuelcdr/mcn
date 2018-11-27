@@ -14,50 +14,65 @@ section.resume-section {
   color: $secondary;
 }
 
-
-.no-sm {
-  display: none;
-}
-
 #inicio {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
   &::before {
     content: "";
-    background-image: url(/img/inicio-bg.jpg);
-    opacity: 0.6;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -2;   
-  }
-  &::after {
-    content: "";
-    background-image: url(/vendor/mdbootstrap/img/overlays/06.png);
-    background-attachment: fixed;
+    background-color: $black;
+    // background-image: url(/vendor/mdbootstrap/img/overlays/02.png);
+    // background-attachment: fixed;
     opacity: 1;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: -1;
+    z-index: -2;
+  }
+  &::after {
+    content: "";
+    background-image: url(/img/inicio-bg.jpg);
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
   }
 }
 
 #manueldev {
   white-space: nowrap;
-  font-size: 4.8rem;
-  line-height: 4.5rem;
+  font-size: 4rem;
+  line-height: 4rem;
 }
 #manueldev-sub {
   white-space: nowrap;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
+.no-sm {
+  display: none;
+}
+
+.pc {
+  display: none;
+}
+
+.tb {
+  display: none;
+}
+
+
 @media (min-width: 415px) {
+  .sm {
+    display: none !important;
+  }
+  .no-sm {
+    display: block !important;
+  }
   #manueldev {
     font-size: 4.5rem;
     line-height: 4.5rem;
@@ -68,10 +83,7 @@ section.resume-section {
 }
 
 @media (min-width: 768px) {
-  .sm {
-    display: none;
-  }
-  .no-sm {
+  .tb {
     display: block;
   }
   section.resume-section {
@@ -89,6 +101,12 @@ section.resume-section {
 }
 
 @media (min-width: 992px) {
+  .pc {
+    display: block !important;
+  }
+  .no-pc {
+    display: none !important;
+  }
   section.resume-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;

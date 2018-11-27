@@ -15,11 +15,15 @@
 }
 
 .text-green {
-  color: $green;
+  color: $green !important;
 }
 
 .text-blue {
-  color: $blue;
+  color: $blue !important;
+}
+
+.text-light {
+  color: $light !important;
 }
 
 a {
@@ -29,4 +33,14 @@ a {
   &:active {
     color: darken($primary, 15%);
   }
+}
+
+.card {
+  .card-body {
+    border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+  }
+}
+
+.my-auto {
+  width: 100%;
 }
