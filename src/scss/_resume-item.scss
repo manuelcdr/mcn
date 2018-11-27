@@ -1,4 +1,27 @@
+section.resume-section {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  max-width: 75rem;
+  .resume-item {
+    .resume-date {
+      min-width: none;
+    }
+  }
+}
+
+.section-title {
+  text-align: center;
+  color: $secondary;
+}
+
+
+.no-sm {
+  display: none;
+}
+
 #inicio {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
   &::before {
     content: "";
     background-image: url(/img/inicio-bg.jpg);
@@ -12,8 +35,9 @@
   }
   &::after {
     content: "";
-    background-color: black;
-    opacity: 0.7;
+    background-image: url(/vendor/mdbootstrap/img/overlays/06.png);
+    background-attachment: fixed;
+    opacity: 1;
     top: 0;
     left: 0;
     bottom: 0;
@@ -33,33 +57,23 @@
   font-size: 1.6rem;
 }
 
-section.resume-section {
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
-  max-width: 75rem;
-  .resume-item {
-    .resume-date {
-      min-width: none;
-    }
-  }
-}
-
-.section-title {
-  text-align: center;
-  color: $secondary;
-}
-
 @media (min-width: 415px) {
   #manueldev {
-    font-size: 6rem;
-    line-height: 5.5rem;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
   }
   #manueldev-sub {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
 @media (min-width: 768px) {
+  .sm {
+    display: none;
+  }
+  .no-sm {
+    display: block;
+  }
   section.resume-section {
     min-height: 100vh;
     .resume-item {
@@ -67,6 +81,10 @@ section.resume-section {
         min-width: 18rem;
       }
     }
+  }
+  #inicio {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
   }
 }
 
