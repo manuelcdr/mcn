@@ -1,3 +1,28 @@
+#inicio {
+  &::before {
+    content: "";
+    background-image: url(/img/inicio-bg.jpg);
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;   
+  }
+  &::after {
+    content: "";
+    background-color: black;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
 #manueldev {
   white-space: nowrap;
   font-size: 4.8rem;

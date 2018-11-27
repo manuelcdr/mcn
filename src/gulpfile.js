@@ -18,40 +18,57 @@ var banner = ['/*!\n',
 ].join('');
 
 // Copy third party libraries from /node_modules into /vendor
-gulp.task('vendor', function() {
+gulp.task('vendor', function () {
 
   // Bootstrap
   gulp.src([
-      './node_modules/bootstrap/dist/**/*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
-    ])
+    './node_modules/bootstrap/dist/**/*',
+    '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
+    '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
+  ])
     .pipe(gulp.dest('./app/vendor/bootstrap'))
 
   // Font Awesome
   gulp.src([
-      './node_modules/@fortawesome/**/*',
-    ])
+    './node_modules/@fortawesome/**/*',
+  ])
     .pipe(gulp.dest('./app/vendor'))
 
   // jQuery
   gulp.src([
-      './node_modules/jquery/dist/*',
-      '!./node_modules/jquery/dist/core.js'
-    ])
+    './node_modules/jquery/dist/*',
+    '!./node_modules/jquery/dist/core.js'
+  ])
     .pipe(gulp.dest('./app/vendor/jquery'))
 
   // jQuery Easing
   gulp.src([
-      './node_modules/jquery.easing/*.js'
-    ])
+    './node_modules/jquery.easing/*.js'
+  ])
     .pipe(gulp.dest('./app/vendor/jquery-easing'))
+
+  // mbbootstrap
+  gulp.src([
+    './node_modules/mdbootstrap/img/overlays/*'
+  ])
+    .pipe(gulp.dest('./app/vendor/mdbootstrap/img/overlays/'));
+
+  gulp.src([
+    './node_modules/mdbootstrap/js/*min.js'
+  ])
+    .pipe(gulp.dest('./app/vendor/mdbootstrap/js/'));
+
+  gulp.src([
+    './node_modules/mdbootstrap/css/*min.css'
+  ])
+    .pipe(gulp.dest('./app/vendor/mdbootstrap/css/'));
 
 });
 
 // Compile SCSS
-gulp.task('css:compile', function() {
-  return gulp.src('./scss/**/*.scss')
+gulp.task('css:compile', function () {
+  return gulp.src([
+    './scss/**/*.scss'])
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
@@ -66,11 +83,11 @@ gulp.task('css:compile', function() {
 });
 
 // Minify CSS
-gulp.task('css:minify', ['css:compile'], function() {
+gulp.task('css:minify', ['css:compile'], function () {
   return gulp.src([
-      './css/*.css',
-      '!./css/*.min.css'
-    ])
+    './css/*.css',
+    '!./css/*.min.css'
+  ])
     .pipe(cleanCSS())
     .pipe(rename({
       suffix: '.min'
@@ -83,11 +100,11 @@ gulp.task('css:minify', ['css:compile'], function() {
 gulp.task('css', ['css:minify']);
 
 // Minify JavaScript
-gulp.task('js:minify', function() {
+gulp.task('js:minify', function () {
   return gulp.src([
-      './js/*.js',
-      '!./js/*.min.js'
-    ])
+    './js/*.js',
+    '!./js/*.min.js'
+  ])
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'
@@ -99,15 +116,17 @@ gulp.task('js:minify', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('html', function() {
+gulp.task('html', function () {
   return gulp.src(['./*.html', './favicon.ico', './favicon.png', './web.config'])
     .pipe(gulp.dest('./app/'))
     .pipe(browserSync.stream());
 });
 
-gulp.task('img', function() {
-  return gulp.src(['./img/**/*'])
-    .pipe(gulp.dest('./app/img'));
+gulp.task('img', function () {
+  return gulp.src([
+    './img/**/*'
+  ])
+    .pipe(gulp.dest('./app/img/'));
 });
 
 // JS
@@ -117,7 +136,7 @@ gulp.task('js', ['js:minify']);
 gulp.task('default', ['css', 'js', 'vendor', 'html', 'img']);
 
 // Configure the browserSync task
-gulp.task('browserSync', function() {
+gulp.task('browserSync', function () {
   browserSync.init({
     server: {
       baseDir: "./app/"
@@ -126,7 +145,7 @@ gulp.task('browserSync', function() {
 });
 
 // Dev task
-gulp.task('dev', ['default', 'browserSync'], function() {
+gulp.task('dev', ['default', 'browserSync'], function () {
   gulp.watch('./scss/*.scss', ['css']);
   gulp.watch('./js/*.js', ['js']);
   gulp.watch('./*.html', ['html']);
@@ -135,9 +154,9 @@ gulp.task('dev', ['default', 'browserSync'], function() {
 
 gulp.task('serve', function () {
   browserSync.init({
-      server: {
-          baseDir: "./"
-      }
+    server: {
+      baseDir: "./"
+    }
   });
 
   gulp.watch("*.html").on("change", reload);
