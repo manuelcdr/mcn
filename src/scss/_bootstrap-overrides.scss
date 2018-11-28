@@ -26,6 +26,18 @@
   color: $light !important;
 }
 
+.text-gray {
+  color: $gray !important;
+}
+
+.text-ligth-gray {
+  color: $ligth-gray !important;
+}
+
+.text-dark-gray {
+  color: $dark-gray !important;
+}
+
 a {
   color: $primary;
   &:hover,

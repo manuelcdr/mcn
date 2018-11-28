@@ -45,8 +45,7 @@ section.resume-section {
 
 #manueldev {
   white-space: nowrap;
-  font-size: 4rem;
-  line-height: 4rem;
+  display: none;
 }
 #manueldev-sub {
   white-space: nowrap;
@@ -74,8 +73,8 @@ section.resume-section {
     display: block !important;
   }
   #manueldev {
-    font-size: 4.5rem;
-    line-height: 4.5rem;
+    font-size: 3rem;
+    line-height: 3rem;
   }
   #manueldev-sub {
     font-size: 1.5rem;
@@ -97,6 +96,10 @@ section.resume-section {
   #inicio {
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
+  }
+  #manueldev-sub {
+    margin-bottom: 4rem;
+    font-size: 3rem;
   }
 }
 
