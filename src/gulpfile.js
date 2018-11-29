@@ -47,6 +47,12 @@ gulp.task('vendor', function () {
   ])
     .pipe(gulp.dest('./app/vendor/jquery-easing'))
 
+  // Scrollreveal
+  gulp.src([
+    './node_modules/scrollreveal/dist/*.js'
+  ])
+    .pipe(gulp.dest('./app/vendor/scrollreveal'))
+
   // mbbootstrap
   gulp.src([
     './node_modules/mdbootstrap/img/overlays/*'
