@@ -116,3 +116,9 @@ section.resume-section {
     padding-bottom: 3rem !important;
   }
 }
+
+#img-contact {
+  max-width: 12rem !important;
+  max-height: 12rem !important;
+  border: 0.5rem solid fade-out($white, 0.8);
+}

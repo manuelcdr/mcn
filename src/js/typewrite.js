@@ -62,14 +62,27 @@ TxtType.prototype.tick = function () {
     }, delta);
 };
 
-$(function () {
+var startTypewrite = function () {
     var elements = document.getElementsByClassName('start-typewrite');
     for (var i = 0; i < elements.length; i++) {
         new TxtType(elements[i]);
     }
+}
+
+$(function () {
+
+    if (document.readyState == 'loading') {
+        document.addEventListener('DOMContentLoaded', startTypewrite);
+    } else {
+        startTypewrite();
+    }
+
     // INJECT CSS
     // var css = document.createElement("style");
     // css.type = "text/css";
     // css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     // document.body.appendChild(css);
 })
+
+
+
