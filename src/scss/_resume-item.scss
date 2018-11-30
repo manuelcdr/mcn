@@ -1,7 +1,7 @@
 section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
-  max-width: 75rem;
+  //max-width: 75rem;
   .resume-item {
     .resume-date {
       min-width: none;
@@ -53,25 +53,6 @@ section.resume-section {
   font-size: 1.4rem;
 }
 
-#name-contact {
-  font-size: 1.5rem;
-}
-
-.img-col-contact, .detail-col-contact {
-  text-align: center;
-}
-
-.icon-contact {
-  font-size: 1.5rem;
-}
-
-#img-contact {
-  max-width: 8rem !important;
-  max-height: 8rem !important;
-  border: 0.5rem solid fade-out($white, 0.8);
-  margin-bottom: 1rem;
-}
-
 .no-sm {
   display: none;
 }
@@ -84,6 +65,45 @@ section.resume-section {
   display: none;
 }
 
+/* Contato */
+.img-col-contact, .detail-col-contact {
+  text-align: center;
+}
+
+#name-contact {
+  font-size: 2rem;
+}
+
+.icon-contact {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.number-contact {
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+}
+
+.email-contact {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+#img-contact {
+  max-width: 8rem !important;
+  max-height: 8rem !important;
+  border: 0.5rem solid fade-out($white, 0.8);
+  margin-bottom: 1rem;
+}
+
+.contact-link {
+  text-decoration: none !important;
+  &:hover {
+    //background-color: $light;
+    text-decoration: none !important;
+    color: $secondary !important;
+  }
+}
 
 @media (min-width: 415px) {
   .sm {
@@ -98,17 +118,6 @@ section.resume-section {
   }
   #manueldev-sub {
     font-size: 1.5rem;
-  }
-  #name-contact {
-    font-size: 1.5rem;
-  }
-  #img-contact {
-    max-width: 8rem !important;
-    max-height: 8rem !important;
-    border: 0.3rem solid fade-out($white, 0.5);
-  }
-  .icon-contact {
-    font-size: 2.5rem;
   }
 }
 
@@ -134,10 +143,35 @@ section.resume-section {
   }
   #name-contact {
     font-size: 3rem;
+    line-height: 2.3rem;
   }
+  .social-icons {
+    a {
+      font-size: 1.3rem;
+    }
+  }
+  .icon-contact {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+  }
+
+  .icon-email-contact {
+    font-size: 2rem;
+  }
+
+  .number-contact {
+    font-size: 2.4rem;
+    line-height: 2rem;
+  }
+
+  .email-contact {
+    font-size: 1.47rem;
+    line-height: 1.3rem;
+  }
+  
   #img-contact {
-    max-width: 10rem !important;
-    max-height: 10rem !important;
+    max-width: 11rem !important;
+    max-height: 11rem !important;
     border: 0.5rem solid fade-out($white, 0.8);
   }
 }
@@ -160,9 +194,8 @@ section.resume-section {
     text-align: left;
   }
   #img-contact {
-    max-width: 12rem !important;
-    max-height: 12rem !important;
-    border: 0.5rem solid fade-out($white, 0.8);
+    margin-bottom: 0 !important;
   }
+
 }
 

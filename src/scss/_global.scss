@@ -60,7 +60,7 @@ p.lead {
     display: inline-block;
     height: 2rem;
     width: 2rem;
-    background-color: $secondary;
+    //background-color: $secondary;
     color: $white;
     border-radius: 100%;
     text-align: center;
@@ -71,7 +71,7 @@ p.lead {
       margin-right: 0;
     }
     &:hover {
-      background-color: $light;
+      //background-color: $light;
       color: $secondary;
     }
   }
