@@ -42,19 +42,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#inicio" onclick="gtag('event', 'inicio');">Inicio</a>
+          <a class="nav-link js-scroll-trigger" href="#inicio" >Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#cases" onclick="gtag('event', 'cases');">Cases</a>
+          <a class="nav-link js-scroll-trigger" href="#cases" >Cases</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#servicos" onclick="gtag('event', 'servicos');">Serviços</a>
+          <a class="nav-link js-scroll-trigger" href="#servicos" >Serviços</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills" onclick="gtag('event', 'skills');">Skills</a>
+          <a class="nav-link js-scroll-trigger" href="#skills" >Skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#contato" onclick="gtag('event', 'contato');">Contato</a>
+          <a class="nav-link js-scroll-trigger" href="#contato" >Contato</a>
         </li>
       </ul>
     </div>
@@ -138,12 +138,18 @@
                 <div class="card-body bg-dark">
                   <p class="mb-2">Manuel Cordeiro Neto</p>
                   <p class="mb-2">
-                    <a class="text-white" href="https://wa.me/5511987442940">
+                    <a  class="text-white gtag" 
+                        data-action="clicou no celular da aba inicio"
+                        data-category="contato"
+                        href="https://wa.me/5511987442940">
                       <i class="fab fa-whatsapp  sr-contact-1 text-white"></i> (11) 9.8744-2940
                     </a>
                   </p>
                   <p class="mb-1">
-                    <a class="text-white" href="mailto:contato@manueldev.com.br">
+                    <a  class="text-white gtag" 
+                        data-action="clicou no email da aba inicio"
+                        data-category="contato"
+                        href="mailto:contato@manueldev.com.br">
                       <i class="far fa-envelope mb-1 sr-contact-2 text-white"></i> contato@manueldev.com.br
                     </a>
                   </p>
@@ -405,13 +411,19 @@
               Manuel Cordeiro Neto
             </h2>
             <div class="mb-4">
-              <a class="contact-link text-white" href="https://wa.me/5511987442940">
+              <a  class="contact-link text-white gtag" 
+                  data-action="clicou no celular da aba contato"
+                  data-category="contato"
+                  href="https://wa.me/5511987442940">
                 <i class="icon-contact fab fa-whatsapp sr-contact-1 align-middle"></i>
                 <span class="number-contact align-middle">(11)9.8744-2940</span>
               </a>
             </div>
             <div class="mb-4">
-              <a class="contact-link text-white" href="mailto:contato@manueldev.com.br">
+              <a  class="contact-link text-white gtag" 
+                  data-action="clicou no email da aba contato"
+                  data-category="contato"
+                  href="mailto:contato@manueldev.com.br">
                 <i class="icon-contact icon-email-contact far fa-envelope align-middle"></i>
                 <span class="email-contact align-middle">contato@manueldev.com.br</span>
               </a>
@@ -459,6 +471,7 @@
     gtag('js', new Date());
     gtag('config', 'UA-129569169-1');
   </script>
+  <script src="js/ga.min.js"></script>
 
 </body>
 
