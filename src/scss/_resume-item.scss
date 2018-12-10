@@ -66,6 +66,14 @@ section.resume-section {
 }
 
 /* Contato */
+#contato {
+  padding-bottom: 0 !important;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
 .img-col-contact, .detail-col-contact {
   text-align: center;
 }
@@ -196,6 +204,8 @@ section.resume-section {
   #img-contact {
     margin-bottom: 0 !important;
   }
-
+  footer{
+    margin-top: 0;
+  }
 }
 
